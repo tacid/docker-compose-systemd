@@ -1,0 +1,7 @@
+[Unit]
+Description=[APP_NAME] Refresh images and update containers
+
+[Service]
+Type=oneshot
+
+ExecStart=/bin/systemctl reload [app_name].service
