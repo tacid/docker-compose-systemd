@@ -1,0 +1,10 @@
+[Unit]
+Description=[APP_NAME] Refresh images and update containers
+Requires=[app_name].service
+After=[app_name].service
+
+[Timer]
+OnCalendar=*:0/15
+
+[Install]
+WantedBy=timers.target
