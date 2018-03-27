@@ -23,3 +23,7 @@
 # systemctl enable [app_name] [app_name]-reload
 # systemctl start [app_name] [app_name]-reload
 ```
+
+WARNING: В файле `app_name.service` обязательно поменяйте `[working_dir]` на папку,
+в которой находится ваше приложение и файл `docker-compose.yml`. Также в поле `description`
+напишите название вашего приложения
