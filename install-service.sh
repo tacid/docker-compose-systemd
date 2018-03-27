@@ -1,7 +1,6 @@
 #!/bin/bash
 
-systemd_dir="./test/"
-#systemd_dir=/etc/systemd/system/
+systemd_dir=/etc/systemd/system/
 
 usage() {
     echo "Usage: $0 [install|remove] app_name working_dir"
