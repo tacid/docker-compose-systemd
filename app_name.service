@@ -1,5 +1,5 @@
 [Unit]
-Description=[APP_NAME] Docker Compose container starter
+Description=[APP_NAME] Docker Compose container service
 After=docker.service network-online.target
 Requires=docker.service network-online.target
 
