@@ -4,12 +4,14 @@
 
 == Файлы
 
-| Файл | Назначение |
-| ---- | ---- |
-| `/[working_dir]/docker-compose.yml` | Compose файл описывает, что разворачивать |
-| `/etc/systemd/system/[app_name].service` | Описание сервиса для упраления docker-compose приложением |
-| `/etc/systemd/system/[app_name]-reload.service` | Исполняемая инструкция для перезагрузки сервиса описанного в `[app_name].service` |
-| `/etc/systemd/system/[app_name]-reload.timer` | Таймер для планирования перезагрузок |
+[cols=2*,options="header"]
+|===
+| Файл | Назначение
+| `/[working_dir]/docker-compose.yml` | Compose файл описывает, что разворачивать
+| `/etc/systemd/system/[app_name].service` | Описание сервиса для упраления docker-compose приложением
+| `/etc/systemd/system/[app_name]-reload.service` | Исполняемая инструкция для перезагрузки сервиса описанного в `[app_name].service`
+| `/etc/systemd/system/[app_name]-reload.timer` | Таймер для планирования перезагрузок
+|===
 
 == Установка
 
