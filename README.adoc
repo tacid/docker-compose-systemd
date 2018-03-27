@@ -1,0 +1,23 @@
+= Примеры для создания systemd сервиса для управления docker-compose
+
+В этом проекте собраны примеры файлов для создания сервиса из docker-compose сборки.
+
+== Файлы
+
+| Файл | Назначение |
+| ---- | ---- |
+| `/[working_dir]/docker-compose.yml` | Compose файл описывает, что разворачивать |
+| `/etc/systemd/system/[app_name].service` | Описание сервиса для упраления docker-compose приложением |
+| `/etc/systemd/system/[app_name]-reload.service` | Исполняемая инструкция для перезагрузки сервиса описанного в `[app_name].service` |
+| `/etc/systemd/system/[app_name]-reload.timer` | Таймер для планирования перезагрузок |
+
+== Установка
+
+Переименуйте соответсвующие файлы и поместите их в нужные директории, после чего отредактируйте согласно текущей инсталяци.
+Затем нужно перезагрузить systemd:
+
+```bash
+# systemctl daemon-reload
+# systemctl enable [app_name] [app_name]-reload
+# systemctl start [app_name] [app_name]-reload
+```
